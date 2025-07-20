@@ -1,0 +1,493 @@
+/* ===========================
+   Tema lilás elegante - Variáveis 
+   =========================== */
+
+ :root {
+    --cor-primaria: #7a4988;
+    --cor-secundaria: #cda4de;
+    --cor-fundo: #f9f7fb;
+    --cor-texto: #333;
+    --cor-texto-claro: #666;
+    --cor-branco: #fff;
+    --cor-borda: #d1c4e9;
+    --sombra-leve: rgba(122, 73, 136, 0.15);
+}
+
+
+/* ===========================
+   Reset e Base
+   =========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ===========================
+   Container Centralizado
+   =========================== */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+/* ===========================
+   Cabeçalho Estilizado
+   =========================== */
+
+header {
+    background: var(--cor-primaria);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px var(--sombra-leve);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: var(--cor-branco);
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI Black', Arial Black, sans-serif;
+    user-select: none;
+}
+
+
+/* ===========================
+   Navegação Elegante
+   =========================== */
+
+nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: var(--cor-branco);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 8px 12px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-secundaria);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    list-style: none;
+}
+
+
+/* ===========================
+   Menu Responsivo
+   =========================== */
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* ===========================
+   Conteúdo Principal
+   =========================== */
+
+main.container {
+    padding: 40px 20px;
+}
+
+
+/* ===========================
+   Cartões Elegantes
+   =========================== */
+
+.card {
+    background: var(--cor-branco);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--sombra-leve);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(122, 73, 136, 0.3);
+}
+
+.card h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+    letter-spacing: 1.5px;
+}
+
+.card p {
+    font-size: 1.125rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+
+/* ===========================
+   Botões Lilás Elegantes
+   =========================== */
+
+.btn {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 14px 36px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 12px rgba(122, 73, 136, 0.25);
+    user-select: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    outline: none;
+    box-shadow: 0 10px 20px rgba(122, 73, 136, 0.4);
+    transform: scale(1.05);
+}
+
+
+/* ===========================
+   Rodapé Fixo Estilizado
+   =========================== */
+
+footer {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px var(--sombra-leve);
+    user-select: none;
+}
+
+
+/* ===========================
+   Formulários Elegantes
+   =========================== */
+
+form {
+    background: var(--cor-branco);
+    padding: 30px 40px;
+    max-width: 700px;
+    margin: 30px auto 80px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px var(--sombra-leve);
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover,
+form:focus-within {
+    box-shadow: 0 10px 30px rgba(122, 73, 136, 0.25);
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--cor-primaria);
+    user-select: none;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1.8px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--cor-texto);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: var(--cor-secundaria);
+    outline: none;
+    box-shadow: 0 0 8px var(--cor-secundaria);
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.4;
+}
+
+form button,
+form .btn-submit {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 12px rgba(122, 73, 136, 0.25);
+    user-select: none;
+}
+
+form button:hover,
+form .btn-submit:hover,
+form button:focus,
+form .btn-submit:focus {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    outline: none;
+    box-shadow: 0 10px 20px rgba(122, 73, 136, 0.4);
+    transform: scale(1.05);
+}
+
+
+/* ===========================
+   Títulos de seção e tabelas
+   =========================== */
+
+.section-title {
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    user-select: none;
+}
+
+.table-alertas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px var(--sombra-leve);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-alertas thead {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.table-alertas th,
+.table-alertas td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.table-alertas tbody tr:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    cursor: pointer;
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--cor-texto-claro);
+    font-style: italic;
+    margin-top: 30px;
+    user-select: none;
+}
+
+
+/* Estilo para inputs dentro do form, integrando com a classe 'form-control' */
+
+form .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1.8px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--cor-texto);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form .form-control:focus {
+    border-color: var(--cor-secundaria);
+    outline: none;
+    box-shadow: 0 0 8px var(--cor-secundaria);
+}
+
+.help-text {
+    color: var(--cor-texto-claro);
+    font-size: 0.875rem;
+    margin-top: -16px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.field-error {
+    color: #b00020;
+    font-size: 0.9rem;
+    margin-top: -12px;
+    margin-bottom: 16px;
+}
+
+
+/* Alertas de sucesso ou erro */
+
+.alert {
+    padding: 14px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Grupo de cada campo */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-cancel {
+    background-color: #eee;
+    color: var(--cor-primaria);
+    border-radius: 30px;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background-color: var(--cor-borda);
+}
+
+
+/* Erro de campo */
+
+.field-error {
+    color: #b00020;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+
+/* Mensagem de ajuda */
+
+.help-text {
+    color: var(--cor-texto-claro);
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}

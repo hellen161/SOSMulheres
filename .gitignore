@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django
+*.log
+staticfiles/
+media/
+
+# VS Code
+.vscode/
+
+# Virtual Environment
+env/
+venv/
+ENV/
+.venv/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# IDEs
+.idea/
+*.iml
+
+# Migrations (opcional se quiser evitar arquivos gerados automaticamente)
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+
+# Backup
+*.bak
+*.swp
+
+# Secret keys (se criar arquivos secretos)
+secrets.json
